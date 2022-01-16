@@ -1,0 +1,27 @@
+<div class="content-container">
+  <h2>Eigene Bewertung abgeben</h2>
+  <p></p>
+  <form *ngIf="bewertungForm"
+       [formGroup]="bewertungForm"
+       class="bewertungs-card-container">
+    <div class="bewertungs-card full">
+      <lib-stars-input formControlName="stars">
+      </lib-stars-input>
+      <p></p>
+      <p>
+        <label for="comment">Kommentar: </label>
+        <textarea id="comment" formControlName="comment" style="resize: none; vertical-align: middle">
+        </textarea>
+      </p>
+      <p></p>
+      <p>
+        <button mat-raised-button
+                color="primary"
+                [disabled]="!bewertungForm?.get('stars')?.value"
+                (click)="emitBewertung.emit()">
+          Absenden
+        </button>
+      </p>
+    </div>
+  </form>
+</div>

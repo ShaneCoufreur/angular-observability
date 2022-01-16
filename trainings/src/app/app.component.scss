@@ -1,0 +1,7 @@
+.content {
+  display: grid;
+  grid-template-columns: 20vw 1fr;
+  height: calc(100% - 60px);
+  margin: 0 auto;
+  padding: 60px 0 0;
+}

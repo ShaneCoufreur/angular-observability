@@ -1,0 +1,7 @@
+<ng-container *ngrxLet="trainingWithBewertung; let training">
+  <h1 class="content-header">{{training?.name}}</h1>
+  <app-training-entry [training]="training"></app-training-entry>
+
+  <app-bewertung-input [bewertungForm]="bewertungForm" (emitBewertung)="sendFeedback(training?.id)">
+  </app-bewertung-input>
+</ng-container>

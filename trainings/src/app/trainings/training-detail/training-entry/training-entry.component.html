@@ -1,0 +1,16 @@
+<div class="content-container">
+  <p>{{training?.description}}</p>
+  <p>Ihre Trainerin/Ihr Trainer: <b>{{training?.trainer?.name}}</b></p>
+  <p>Vom <b>{{training?.startDate | date}}</b> bis zum <b>{{training?.endDate | date}}</b>.</p>
+  <p></p>
+
+  <h3>Bewertungen unseres {{training?.name}}-Trainings:</h3>
+  <div class="bewertungs-card-container">
+    <div *ngFor="let bewertung of training?.bewertungen; trackBy: trackById" data-e2e="card-result" class="bewertungs-card">
+      <lib-stars-input [staticRating]="bewertung.stars">
+      </lib-stars-input>
+      <p>{{bewertung.comment}}</p>
+      <p>von <b>{{bewertung.bewerter}}</b></p>
+    </div>
+  </div>
+</div>

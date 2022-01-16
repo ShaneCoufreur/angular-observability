@@ -1,0 +1,33 @@
+<h1 class="content-header">Unsere Trainings</h1>
+<div *ngIf="error|async as msg" class="content-container">
+  <h2>Fehler</h2>
+  <p>{{msg}}</p>
+</div>
+<div *ngIf="(loading|async) === true" class="content-container">
+  <mat-spinner [diameter]="30" [strokeWidth]="3"></mat-spinner>
+</div>
+<div *ngFor="let training of trainingsWithBewertungen | async; trackBy: trackById"
+     class="content-container">
+  <h2>{{training.name}}</h2>
+  <p>{{training.description}}</p>
+  <p></p>
+  <p>
+    <button mat-raised-button color="primary" [routerLink]="[training.id]">Zum Training</button>
+  </p>
+  <p></p>
+
+  <h3>Bewertungen unseres {{training.name}}-Trainings:</h3>
+  <div class="bewertungs-card-container">
+    <div *ngFor="let bewertung of training.bewertungen" class="bewertungs-card">
+      <p class="stars">
+        <mat-icon *ngIf="bewertung.stars>0">star</mat-icon>
+        <mat-icon *ngIf="bewertung.stars>1">star</mat-icon>
+        <mat-icon *ngIf="bewertung.stars>2">star</mat-icon>
+        <mat-icon *ngIf="bewertung.stars>3">star</mat-icon>
+        <mat-icon *ngIf="bewertung.stars>4">star</mat-icon>
+      </p>
+      <p>{{bewertung.comment}}</p>
+      <p>von {{bewertung.bewerter}}</p>
+    </div>
+  </div>
+</div>

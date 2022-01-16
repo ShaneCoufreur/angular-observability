@@ -1,0 +1,25 @@
+<nav class="nav-list">
+  <a class="nav-list-el"
+     routerLink="/"
+     routerLinkActive="active"
+     [routerLinkActiveOptions]="{exact: true}">
+    Home
+  </a>
+  <a class="nav-list-el"
+     routerLink="/trainings"
+     routerLinkActive="active">
+    Trainings
+  </a>
+  <a class="nav-list-el"
+     routerLink="/demo"
+     routerLinkActive="active">
+    Demo
+  </a>
+
+  <div *ngrxLet="userInfo; let user" class="user-info">
+    Eingeloggt als: <b>{{user?.name}}</b> <br>
+    Bereits an {{user?.finishedCourses}} Trainings teilgenommen
+  </div>
+</nav>
+
+{{getValue()}}

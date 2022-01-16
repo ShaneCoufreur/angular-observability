@@ -1,0 +1,21 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/bewertungen/src",
+  "monorepo": true,
+  "root": "apps/bewertungen",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/bewertungen/tsconfig.app.json"
+  },
+  "projects": {
+    "bewertungen": {
+      "type": "application",
+      "root": "apps/bewertungen",
+      "entryFile": "main",
+      "sourceRoot": "apps/bewertungen/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/bewertungen/tsconfig.app.json"
+      }
+    }
+  }
+}

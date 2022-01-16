@@ -1,0 +1,27 @@
+<p class="stars input">
+  <mat-icon (mouseover)="hover(1)"
+            data-e2e="star1"
+            (click)="emitRating()">
+    {{currentRating > 0 ? 'star' : 'star_outline'}}
+  </mat-icon>
+  <mat-icon (mouseover)="hover(2)"
+            data-e2e="star2"
+            (click)="emitRating()">
+    {{currentRating > 1 ? 'star' : 'star_outline'}}
+  </mat-icon>
+  <mat-icon (mouseover)="hover(3)"
+            data-e2e="star3"
+            (click)="emitRating()">
+    {{currentRating > 2 ? 'star' : 'star_outline'}}
+  </mat-icon>
+  <mat-icon (mouseover)="hover(4)"
+            data-e2e="star4"
+            (click)="emitRating()">
+    {{currentRating > 3 ? 'star' : 'star_outline'}}
+  </mat-icon>
+  <mat-icon (mouseover)="hover(5)"
+            data-e2e="star5"
+            (click)="emitRating()">
+    {{currentRating > 4 ? 'star' : 'star_outline'}}
+  </mat-icon>
+</p>

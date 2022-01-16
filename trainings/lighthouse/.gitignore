@@ -1,0 +1,5 @@
+report.*
+*.sql
+report
+reports
+!report/.gitkeep

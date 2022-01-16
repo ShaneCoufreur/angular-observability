@@ -1,0 +1,13 @@
+<div class="content-container">
+  <div #element id="map"></div>
+  <button (click)="initMap(element)">Init Map</button>
+  <p>Latitude: {{lat}}, Longitude: {{long}}</p>
+</div>
+
+
+<div class="content-container">
+  <input type="number" #iterationsCount><br>
+  <button (click)="performComplexTask(+iterationsCount.value)">Perform complex Task</button>
+  <br>
+  Result: {{taskResult|json}}
+</div>

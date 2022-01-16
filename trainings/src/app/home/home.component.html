@@ -1,0 +1,24 @@
+<h1 class="content-header">Unsere Trainingplatform</h1>
+<div class="content-container" *ngrxLet="bewertungDurchnitt; let bewertung">
+  <div class="center">
+    Unsere Durchschnittliche Bewertung:
+  <p class="stars">
+    <mat-icon *ngIf="bewertung>0">
+      {{bewertung > 0.8 ? 'star' : 'star_half'}}
+    </mat-icon>
+    <mat-icon *ngIf="bewertung>1">
+      {{bewertung > 1.8 ? 'star' : 'star_half'}}
+    </mat-icon>
+    <mat-icon *ngIf="bewertung>2">
+      {{bewertung > 2.8 ? 'star' : 'star_half'}}
+    </mat-icon>
+    <mat-icon *ngIf="bewertung>3">
+      {{bewertung > 3.8 ? 'star' : 'star_half'}}
+    </mat-icon>
+    <mat-icon *ngIf="bewertung>4">
+      {{bewertung > 4.8 ? 'star' : 'star_half'}}
+    </mat-icon>
+  </p>
+  <p><b>~{{bewertung | number:'1.0-1'}}</b></p>
+  </div>
+</div>
